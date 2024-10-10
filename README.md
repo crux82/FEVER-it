@@ -16,7 +16,7 @@ The quality of the automatic translations was evaluated by comparing the GOLD se
 
 ### Dataset Structure
 
-The SILVER dataset is divided into three sets:
+The SILVER dataset is divided into three sets:   **è IL GOLD MI PARE**
 * **Training Set**: 228,277 claim-evidence pairs
 * **Validation Set**: 15,935 claim-evidence pairs
 * **Test Set**: 2,063 manually validated claim-evidence pairs
