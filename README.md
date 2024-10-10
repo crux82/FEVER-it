@@ -23,6 +23,15 @@
    conda env create -f fevertrain.yml
    conda activate fevertrain
    ```
+### FINE TUNING
+
+| CODE | PROMPT	| DOC	|
+| --------- | :---------: | :-----: |
+|	EN1	|   0-shot | NO |
+|	EN2 | 0-shot |YES |
+|	EN3 | 1-shot | NO  |
+|	EN4 | 1-shot | YES |
+
 
 ## TEST LLAMA3 ON FEVER-IT
 ### Installation
