@@ -208,3 +208,12 @@ Italian 1-shot, With Document
    ```bash
 python -u test.py --lang ITA --prompt_number 2 --adddoc 1 --splitevidence 0 --adapter "sag-uniroma2/llama3_adapter_ITA_pr2_add1__split0_ep1_lr0.0001_fever-it" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
 ```
+
+### How to cite FEVER-it
+
+This dataset was introduced in the work *"Leveraging Large Language Models for Fact Verification in Italian"* available at the following [link](XXX.pdf).
+If you find FEVER-it useful for your research, please cite the following paper:
+
+~~~~
+
+~~~~
