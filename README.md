@@ -91,4 +91,38 @@ python -u train.py --lang ITA --prompt_number 2 --learn_rate 0.0001 --epochs 1 -
    ```
 **CALCULATE BASELINE**
 
+English 0-shot, No Document
+   ```bash
+   python -u test_baseline.py --lang ENG --prompt_number 1 --adddoc 0 --splitevidence 0 --adapter "" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
+  ```
+English 0-shot, With Document
+   ```bash
+  python -u test_baseline.py --lang ENG --prompt_number 1 --adddoc 1 --splitevidence 0 --adapter "" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
+```
+English 1-shot, No Document
+   ```bash
+  python -u test_baseline.py --lang ENG --prompt_number 2 --adddoc 0 --splitevidence 0 --adapter "" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
+```
+English 1-shot, With Document
+   ```bash
+  python -u test_baseline.py --lang ENG --prompt_number 2 --adddoc 1 --splitevidence 0 --adapter "" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
+```
+
+
+Italian 0-shot, No Document
+   ```bash
+  python -u test_baseline.py --lang ITA --prompt_number 1 --adddoc 0 --splitevidence 0 --adapter "" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
+  ```
+Italian 0-shot, With Document
+   ```bash
+python -u test_baseline.py --lang ITA --prompt_number 1 --adddoc 1 --splitevidence 0 --adapter "" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
+  ```
+Italian 1-shot, No Document
+   ```bash
+python -u test_baseline.py --lang ITA --prompt_number 2 --adddoc 0 --splitevidence 0 --adapter "" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
+  ```
+Italian 1-shot, With Document
+   ```bash
+python -u test_baseline.py --lang ITA --prompt_number 2 --adddoc 1 --splitevidence 0 --adapter "" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
+```
 **TEST FINETUNED MODEL**
