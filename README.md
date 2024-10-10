@@ -217,3 +217,11 @@ If you find FEVER-it useful for your research, please cite the following paper:
 ~~~~
 
 ~~~~
+
+## References
+CITARE FEVER ORIGINALE
+
+
+## Contacts
+
+For any questions or suggestions, you can send an e-mail to <croce@info.uniroma2.it>
