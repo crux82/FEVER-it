@@ -26,37 +26,37 @@
 ### FINE TUNING
 It is important to verify the correct row in the following instruction based on the type of fine-tuning you want to perform. Ensure you select the corresponding command for the correct setup.
 
-EN1: 0-shot, No Document
+English 0-shot, No Document
    ```bash
 python -u train.py --lang ENG --prompt_number 1 --learn_rate 0.0001 --epochs 1 --base_model meta-llama/Meta-Llama-3-8B-Instruct --conf config.json --adddoc 0 --splitevidence 0
   ```
-EN2: 0-shot, With Document
+English 0-shot, With Document
    ```bash
 python -u train.py --lang ENG --prompt_number 1 --learn_rate 0.0001 --epochs 1 --base_model meta-llama/Meta-Llama-3-8B-Instruct --conf config.json --adddoc 1 --splitevidence 0
   ```
-EN3: 1-shot, No Document
+English 1-shot, No Document
    ```bash
 python -u train.py --lang ENG --prompt_number 2 --learn_rate 0.0001 --epochs 1 --base_model meta-llama/Meta-Llama-3-8B-Instruct --conf config.json --adddoc 0 --splitevidence 0
   ```
-EN4: 1-shot, With Document
+English 1-shot, With Document
    ```bash
 python -u train.py --lang ENG --prompt_number 2 --learn_rate 0.0001 --epochs 1 --base_model meta-llama/Meta-Llama-3-8B-Instruct --conf config.json --adddoc 1 --splitevidence 0
   ```
 
 
-IT1: 0-shot, No Document (Italian)
+Italian 0-shot, No Document
    ```bash
 python -u train.py --lang ITA --prompt_number 1 --learn_rate 0.0001 --epochs 1 --base_model meta-llama/Meta-Llama-3-8B-Instruct --conf config.json --adddoc 0 --splitevidence 0
   ```
-IT2: 0-shot, With Document (Italian)
+Italian 0-shot, With Document
    ```bash
 python -u train.py --lang ITA --prompt_number 1 --learn_rate 0.0001 --epochs 1 --base_model meta-llama/Meta-Llama-3-8B-Instruct --conf config.json --adddoc 1 --splitevidence 0
   ```
-IT3: 1-shot, No Document (Italian)
+Italian 1-shot, No Document
    ```bash
 python -u train.py --lang ITA --prompt_number 2 --learn_rate 0.0001 --epochs 1 --base_model meta-llama/Meta-Llama-3-8B-Instruct --conf config.json --adddoc 0 --splitevidence 0
   ```
-IT4: 1-shot, With Document (Italian)
+Italian 1-shot, With Document
    ```bash
 python -u train.py --lang ITA --prompt_number 2 --learn_rate 0.0001 --epochs 1 --base_model meta-llama/Meta-Llama-3-8B-Instruct --conf config.json --adddoc 1 --splitevidence 0
   ```
