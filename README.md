@@ -7,14 +7,14 @@
 In the following section, you can find the models already finetuned with various modes.
 | LANGUAGE | PROMPT |Document | Download |
 |:----:| :--------------: | :--: | :---------: |
-|ENG| 0-shot | No | [🤗](https://huggingface.co/sag-uniroma2) &nbsp;&nbsp; |
-|ENG| 0-shot| Yes | [🤗](https://huggingface.co/sag-uniroma2) &nbsp;&nbsp;|
-|ENG| 1-shot | No | [🤗](https://huggingface.co/sag-uniroma2) &nbsp;&nbsp; |
-|ENG| 1-shot| Yes | [🤗](https://huggingface.co/sag-uniroma2) &nbsp;&nbsp; |
-|ITA| 0-shot | No | [🤗](https://huggingface.co/sag-uniroma2) &nbsp;&nbsp; |
-|ITA| 0-shot| Yes | [🤗](https://huggingface.co/sag-uniroma2) &nbsp;&nbsp; |
-|ITA| 1-shot | No | [🤗](https://huggingface.co/sag-uniroma2) &nbsp;&nbsp;  |
-|ITA| 1-shot| Yes | [🤗](https://huggingface.co/sag-uniroma2) &nbsp;&nbsp; |
+|ENG| 0-shot | No | [🤗](https://huggingface.co/sag-uniroma2/llama3_adapter_ENG_pr1_add0__split0_ep1_lr0.0001_fever-eng) &nbsp;&nbsp; |
+|ENG| 0-shot| Yes | [🤗](https://huggingface.co/sag-uniroma2/llama3_adapter_ENG_pr1_add1__split0_ep1_lr0.0001_fever-eng) &nbsp;&nbsp;|
+|ENG| 1-shot | No | [🤗](https://huggingface.co/sag-uniroma2/llama3_adapter_ENG_pr2_add0__split0_ep1_lr0.0001_fever-eng) &nbsp;&nbsp; |
+|ENG| 1-shot| Yes | [🤗](https://huggingface.co/sag-uniroma2/llama3_adapter_ENG_pr2_add1__split0_ep1_lr0.0001_fever-eng) &nbsp;&nbsp; |
+|ITA| 0-shot | No | [🤗](https://huggingface.co/sag-uniroma2/llama3_adapter_ITA_pr1_add0__split0_ep1_lr0.0001_fever-it) &nbsp;&nbsp; |
+|ITA| 0-shot| Yes | [🤗](https://huggingface.co/sag-uniroma2/llama3_adapter_ITA_pr1_add1__split0_ep1_lr0.0001_fever-it) &nbsp;&nbsp; |
+|ITA| 1-shot | No | [🤗](https://huggingface.co/sag-uniroma2/llama3_adapter_ITA_pr2_add0__split0_ep1_lr0.0001_fever-it) &nbsp;&nbsp;  |
+|ITA| 1-shot| Yes | [🤗](https://huggingface.co/sag-uniroma2/llama3_adapter_ITA_pr2_add1__split0_ep1_lr0.0001_fever-it) &nbsp;&nbsp; |
 
 
 ## FINE-TUNING LLAMA3 ON FEVER AND FEVER-TI
@@ -129,19 +129,19 @@ python -u test_baseline.py --lang ITA --prompt_number 2 --adddoc 1 --spliteviden
 
 English 0-shot, No Document
    ```bash
-   python -u test.py --lang ENG --prompt_number 1 --adddoc 0 --splitevidence 0 --adapter "sag-uniroma2/llama3_adapter_ENG_pr1_add0__split0_ep1_lr0.0001_fever-it" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
+   python -u test.py --lang ENG --prompt_number 1 --adddoc 0 --splitevidence 0 --adapter "sag-uniroma2/llama3_adapter_ENG_pr1_add0__split0_ep1_lr0.0001_fever-eng" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
   ```
 English 0-shot, With Document
    ```bash
-  python -u test.py --lang ENG --prompt_number 1 --adddoc 1 --splitevidence 0 --adapter "sag-uniroma2/llama3_adapter_ENG_pr1_add1__split0_ep1_lr0.0001_fever-it" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
+  python -u test.py --lang ENG --prompt_number 1 --adddoc 1 --splitevidence 0 --adapter "sag-uniroma2/llama3_adapter_ENG_pr1_add1__split0_ep1_lr0.0001_fever-eng" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
 ```
 English 1-shot, No Document
    ```bash
-  python -u test.py --lang ENG --prompt_number 2 --adddoc 0 --splitevidence 0 --adapter "sag-uniroma2/llama3_adapter_ENG_pr2_add0__split0_ep1_lr0.0001_fever-it" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
+  python -u test.py --lang ENG --prompt_number 2 --adddoc 0 --splitevidence 0 --adapter "sag-uniroma2/llama3_adapter_ENG_pr2_add0__split0_ep1_lr0.0001_fever-eng" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
 ```
 English 1-shot, With Document
    ```bash
-  python -u test.py --lang ENG --prompt_number 2 --adddoc 1 --splitevidence 0 --adapter "sag-uniroma2/llama3_adapter_ENG_pr2_add1__split0_ep1_lr0.0001_fever-it" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
+  python -u test.py --lang ENG --prompt_number 2 --adddoc 1 --splitevidence 0 --adapter "sag-uniroma2/llama3_adapter_ENG_pr2_add1__split0_ep1_lr0.0001_fever-eng" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
 ```
 
 
