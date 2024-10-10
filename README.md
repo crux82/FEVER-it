@@ -24,20 +24,7 @@
    conda activate fevertrain
    ```
 ### FINE TUNING
-It is important to verify the correct row in the following table based on the type of fine-tuning you want to perform. Ensure you select the corresponding CODE and command for the correct setup.
-
-| CODE | PROMPT	| DOC	|
-| --------- | :---------: | :-----: |
-|	EN1	|   0-shot | NO |
-|	EN2 | 0-shot |YES |
-|	EN3 | 1-shot | NO  |
-|	EN4 | 1-shot | YES |
-|	IT1	|   0-shot | NO |
-|	IT2 | 0-shot |YES |
-|	IT3 | 1-shot | NO  |
-|	IT4 | 1-shot | YES |
-
-
+It is important to verify the correct row in the following instruction based on the type of fine-tuning you want to perform. Ensure you select the corresponding command for the correct setup.
 
 EN1: 0-shot, No Document
    ```bash
