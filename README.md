@@ -1,7 +1,54 @@
 # FEVER-it
 
 ## DATASET
+FEVER-IT is a large-scale dataset designed for training and evaluating fact verification systems in Italian. It is derived from the original FEVER dataset, an extensive resource for fact-checking in English, which contains claims and their corresponding evidence from Wikipedia **[CITARE]**.
 
+The entire FEVER dataset was translated into Italian using **MADLAD-400**, a multilingual translation model based on the Transformer architecture. This automatic translation process generated the **SILVER** dataset, comprising **246,275** claim-evidence pairs.
+
+Multiple reviewers manually validated a subset of the data to ensure high-quality translations. They focused on correcting errors related to fluency, completeness, and correctness of the automatic translations compared to the original English text. This effort produced the **GOLD** dataset, a high-quality subset containing **2,063** manually validated claim-evidence pairs.
+
+The quality of the automatic translations was evaluated by comparing the GOLD set with the corresponding portion of the SILVER set using BLEU metrics. The results indicated very high translation quality:
+
+| Metric | BLEU-1 | BLEU-2 | BLEU-3 | BLEU-4 |
+|--------|--------|--------|--------|--------|
+| **Claim** | 0.9776 | 0.9695 | 0.9623 | 0.9544 |
+| **Evidence** | 0.9529 | 0.9411 | 0.9309 | 0.9207 |
+
+### Dataset Structure
+
+The SILVER dataset is divided into three sets:
+* **Training Set**: 228,277 claim-evidence pairs
+* **Validation Set**: 15,935 claim-evidence pairs
+* **Test Set**: 2,063 manually validated claim-evidence pairs
+
+Each claim is categorized into one of three classes, consistent with the original FEVER dataset:
+* **Supports**
+* **Refutes**
+* **Not Enough Info**
+
+The distribution in the GOLD test set is as follows:
+* **Total**: 2,063
+   * **Supports**: 654
+   * **Refutes**: 643
+   * **Not Enough Info**: 766
+
+The dataset includes only the translated claims and evidence, along with references to the document sentence ID of the evidence, and the label provided in the original dataset. While it does not include the original English texts, it maintains alignment with the source data for potential cross-lingual research.
+
+### Methodology for Using FEVER-IT
+
+The FEVER-IT dataset is intended to facilitate the development of fact verification systems in Italian. Researchers can train models on the SILVER dataset (training and validation sets) and evaluate them using the high-quality GOLD test set.
+
+In our experiments, we fine-tuned a model on the FEVER-IT dataset. We achieved excellent performance, with metrics of recall, precision, accuracy, and F1-score comparable to a model trained on English data **[CITARE E MOSTRARE MIGLIORI RISULTATI RISPETTO AL MODELLO ADDESTRATO IN INGLESE]**. This demonstrates the dataset's effectiveness in supporting the development of robust fact verification systems in Italian.
+
+**Note**: The focus of FEVER-IT is on claim verification using provided evidence. The evidence retrieval component is not addressed in this dataset, as the primary goal is to provide a relevant and high-quality resource for fact-checking in Italian.
+
+### References
+
+For comprehensive information on the original FEVER dataset and its extensions, please refer to the **[Original FEVER Dataset Citation]**.
+
+Our dataset is derived from an extended version of FEVER that includes evidence for the "Not Enough Info" category, which is particularly useful for training fact-checking models. Specifically, we utilized the dataset provided in **[Citation B]**. In our version, we provide only the manually validated test set, focusing on the claim-evidence pairs with higher accuracy rather than the entire test set. This approach ensures that evaluations are based on high-quality, accurate data.
+
+In contrast to the reference dataset, where each claim could be associated with multiple pieces of evidence (corresponding to multiple lines from Wikipedia articles), we have separated these into individual claim-evidence pairs. Consequently, the number of rows in our dataset is higher than in the original. This granular structure enhances the precision and effectiveness of training and evaluating fact verification models.
 
 ## ADAPTERS LLAMA3 FINETUNED ON FEVER AND FEVER-IT
 In the following section, you can find the models already finetuned with various modes.
