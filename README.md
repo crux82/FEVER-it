@@ -11,11 +11,10 @@
 |ENG| 0-shot| Yes | [🤗](https://huggingface.co/sag-uniroma2) &nbsp;&nbsp;|
 |ENG| 1-shot | No | [🤗](https://huggingface.co/sag-uniroma2) &nbsp;&nbsp; |
 |ENG| 1-shot| Yes | [🤗](https://huggingface.co/sag-uniroma2) &nbsp;&nbsp; |
-
 |ITA| 0-shot | No | [🤗](https://huggingface.co/sag-uniroma2) &nbsp;&nbsp; |
 |ITA| 0-shot| Yes | [🤗](https://huggingface.co/sag-uniroma2) &nbsp;&nbsp; |
-|ITA| 1-shot | No | - |
-|ITA| 1-shot| Yes | -|
+|ITA| 1-shot | No | [🤗](https://huggingface.co/sag-uniroma2) &nbsp;&nbsp;  |
+|ITA| 1-shot| Yes | [🤗](https://huggingface.co/sag-uniroma2) &nbsp;&nbsp; |
 
 
 ## FINE-TUNING LLAMA3 ON FEVER-IT
