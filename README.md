@@ -5,16 +5,16 @@
 
 ## ADAPTERS LLAMA3 FINETUNED ON FEVER AND FEVER-IT
 In the following section, you can find the models already finetuned with various modes.
-| LANGUAGE | PROMPT |Document | Download |
-|:----:| :--------------: | :--: | :---------: |
-|ENG| 0-shot | No | [🤗](https://huggingface.co/sag-uniroma2/llama3_adapter_ENG_pr1_add0__split0_ep1_lr0.0001_fever-eng) &nbsp;&nbsp; |
-|ENG| 0-shot| Yes | [🤗](https://huggingface.co/sag-uniroma2/llama3_adapter_ENG_pr1_add1__split0_ep1_lr0.0001_fever-eng) &nbsp;&nbsp;|
-|ENG| 1-shot | No | [🤗](https://huggingface.co/sag-uniroma2/llama3_adapter_ENG_pr2_add0__split0_ep1_lr0.0001_fever-eng) &nbsp;&nbsp; |
-|ENG| 1-shot| Yes | [🤗](https://huggingface.co/sag-uniroma2/llama3_adapter_ENG_pr2_add1__split0_ep1_lr0.0001_fever-eng) &nbsp;&nbsp; |
-|ITA| 0-shot | No | [🤗](https://huggingface.co/sag-uniroma2/llama3_adapter_ITA_pr1_add0__split0_ep1_lr0.0001_fever-it) &nbsp;&nbsp; |
-|ITA| 0-shot| Yes | [🤗](https://huggingface.co/sag-uniroma2/llama3_adapter_ITA_pr1_add1__split0_ep1_lr0.0001_fever-it) &nbsp;&nbsp; |
-|ITA| 1-shot | No | [🤗](https://huggingface.co/sag-uniroma2/llama3_adapter_ITA_pr2_add0__split0_ep1_lr0.0001_fever-it) &nbsp;&nbsp;  |
-|ITA| 1-shot| Yes | [🤗](https://huggingface.co/sag-uniroma2/llama3_adapter_ITA_pr2_add1__split0_ep1_lr0.0001_fever-it) &nbsp;&nbsp; |
+| LANGUAGE | DATASET | PROMPT |Document | Download |
+|:----:| ----:| :--------------: | :--: | :---------: |
+|ENG|FEVER| 0-shot | No | [🤗](https://huggingface.co/sag-uniroma2/llama3_adapter_ENG_pr1_add0__split0_ep1_lr0.0001_fever-eng) &nbsp;&nbsp; |
+|ENG|FEVER| 0-shot| Yes | [🤗](https://huggingface.co/sag-uniroma2/llama3_adapter_ENG_pr1_add1__split0_ep1_lr0.0001_fever-eng) &nbsp;&nbsp;|
+|ENG|FEVER| 1-shot | No | [🤗](https://huggingface.co/sag-uniroma2/llama3_adapter_ENG_pr2_add0__split0_ep1_lr0.0001_fever-eng) &nbsp;&nbsp; |
+|ENG|FEVER| 1-shot| Yes | [🤗](https://huggingface.co/sag-uniroma2/llama3_adapter_ENG_pr2_add1__split0_ep1_lr0.0001_fever-eng) &nbsp;&nbsp; |
+|ITA|FEVER-IT| 0-shot | No | [🤗](https://huggingface.co/sag-uniroma2/llama3_adapter_ITA_pr1_add0__split0_ep1_lr0.0001_fever-it) &nbsp;&nbsp; |
+|ITA|FEVER-IT| 0-shot| Yes | [🤗](https://huggingface.co/sag-uniroma2/llama3_adapter_ITA_pr1_add1__split0_ep1_lr0.0001_fever-it) &nbsp;&nbsp; |
+|ITA|FEVER-IT| 1-shot | No | [🤗](https://huggingface.co/sag-uniroma2/llama3_adapter_ITA_pr2_add0__split0_ep1_lr0.0001_fever-it) &nbsp;&nbsp;  |
+|ITA|FEVER-IT| 1-shot| Yes | [🤗](https://huggingface.co/sag-uniroma2/llama3_adapter_ITA_pr2_add1__split0_ep1_lr0.0001_fever-it) &nbsp;&nbsp; |
 
 
 ## FINE-TUNING LLAMA3 ON FEVER AND FEVER-IT
