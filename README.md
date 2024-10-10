@@ -4,7 +4,7 @@
 
 
 ## FINETUNED MODEL
-
+In the following section, you can find the models already finetuned with various modes.
 | LANGUAGE | PROMPT |Document | Download |
 |:----:| :--------------: | :--: | :---------: |
 |ENG| 0-shot | No | [🤗](https://huggingface.co/sag-uniroma2) &nbsp;&nbsp; |
