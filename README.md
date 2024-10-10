@@ -37,16 +37,45 @@ It is important to verify the correct row in the following table based on the ty
 |	IT3 | 1-shot | NO  |
 |	IT4 | 1-shot | YES |
 
+
+
+EN1: 0-shot, No Document
    ```bash
-EN1 python -u train.py --lang ENG --prompt_number 1 --learn_rate 0.0001 --epochs 1 --base_model meta-llama/Meta-Llama-3-8B-Instruct --conf config.json --adddoc 0 --splitevidence 0
-EN2 python -u train.py --lang ENG --prompt_number 1 --learn_rate 0.0001 --epochs 1 --base_model meta-llama/Meta-Llama-3-8B-Instruct --conf config.json --adddoc 1 --splitevidence 0
-EN3 python -u train.py --lang ENG --prompt_number 2 --learn_rate 0.0001 --epochs 1 --base_model meta-llama/Meta-Llama-3-8B-Instruct --conf config.json --adddoc 0 --splitevidence 0
-EN4 python -u train.py --lang ENG --prompt_number 2 --learn_rate 0.0001 --epochs 1 --base_model meta-llama/Meta-Llama-3-8B-Instruct --conf config.json --adddoc 1 --splitevidence 0
-IT1 python -u train.py --lang ITA --prompt_number 1 --learn_rate 0.0001 --epochs 1 --base_model meta-llama/Meta-Llama-3-8B-Instruct --conf config.json --adddoc 0 --splitevidence 0
-IT2 python -u train.py --lang ITA --prompt_number 1 --learn_rate 0.0001 --epochs 1 --base_model meta-llama/Meta-Llama-3-8B-Instruct --conf config.json --adddoc 1 --splitevidence 0
-IT3 python -u train.py --lang ITA --prompt_number 2 --learn_rate 0.0001 --epochs 1 --base_model meta-llama/Meta-Llama-3-8B-Instruct --conf config.json --adddoc 0 --splitevidence 0
-IT4 python -u train.py --lang ITA --prompt_number 2 --learn_rate 0.0001 --epochs 1 --base_model meta-llama/Meta-Llama-3-8B-Instruct --conf config.json --adddoc 1 --splitevidence 0
-   ```
+python -u train.py --lang ENG --prompt_number 1 --learn_rate 0.0001 --epochs 1 --base_model meta-llama/Meta-Llama-3-8B-Instruct --conf config.json --adddoc 0 --splitevidence 0
+  ```
+EN2: 0-shot, With Document
+   ```bash
+python -u train.py --lang ENG --prompt_number 1 --learn_rate 0.0001 --epochs 1 --base_model meta-llama/Meta-Llama-3-8B-Instruct --conf config.json --adddoc 1 --splitevidence 0
+  ```
+EN3: 1-shot, No Document
+   ```bash
+python -u train.py --lang ENG --prompt_number 2 --learn_rate 0.0001 --epochs 1 --base_model meta-llama/Meta-Llama-3-8B-Instruct --conf config.json --adddoc 0 --splitevidence 0
+  ```
+EN4: 1-shot, With Document
+   ```bash
+python -u train.py --lang ENG --prompt_number 2 --learn_rate 0.0001 --epochs 1 --base_model meta-llama/Meta-Llama-3-8B-Instruct --conf config.json --adddoc 1 --splitevidence 0
+  ```
+
+
+IT1: 0-shot, No Document (Italian)
+   ```bash
+python -u train.py --lang ITA --prompt_number 1 --learn_rate 0.0001 --epochs 1 --base_model meta-llama/Meta-Llama-3-8B-Instruct --conf config.json --adddoc 0 --splitevidence 0
+  ```
+IT2: 0-shot, With Document (Italian)
+   ```bash
+python -u train.py --lang ITA --prompt_number 1 --learn_rate 0.0001 --epochs 1 --base_model meta-llama/Meta-Llama-3-8B-Instruct --conf config.json --adddoc 1 --splitevidence 0
+  ```
+IT3: 1-shot, No Document (Italian)
+   ```bash
+python -u train.py --lang ITA --prompt_number 2 --learn_rate 0.0001 --epochs 1 --base_model meta-llama/Meta-Llama-3-8B-Instruct --conf config.json --adddoc 0 --splitevidence 0
+  ```
+IT4: 1-shot, With Document (Italian)
+   ```bash
+python -u train.py --lang ITA --prompt_number 2 --learn_rate 0.0001 --epochs 1 --base_model meta-llama/Meta-Llama-3-8B-Instruct --conf config.json --adddoc 1 --splitevidence 0
+  ```
+
+
+ 
 ## TEST LLAMA3 ON FEVER-IT
 ### Installation
 1. Clone the Repository
