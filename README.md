@@ -1,7 +1,7 @@
 # FEVER-it
 This repository contains the dataset and code for "Leveraging Large Language Models for Fact Verification in Italian" published at CLiC-it 2024 by Antonio Scaiella, Stefano Costanzo, ELisa Passone, Danilo Croce and Giorgio Gambosi. The paper is available here XXXXXXX
 
-## DATASET
+## Dataset
 FEVER-IT is a large-scale dataset designed for training and evaluating fact verification systems in Italian. It is derived from the original FEVER dataset, an extensive resource for fact-checking in English, which contains claims and their corresponding evidence from Wikipedia **[CITARE]**.
 
 The entire FEVER dataset was translated into Italian using **MADLAD-400**, a multilingual translation model based on the Transformer architecture. This automatic translation process generated the **SILVER** dataset, comprising **246,275** claim-evidence pairs.
@@ -51,7 +51,7 @@ Our dataset is derived from an extended version of FEVER that includes evidence 
 
 In contrast to the reference dataset, where each claim could be associated with multiple pieces of evidence (corresponding to multiple lines from Wikipedia articles), we have separated these into individual claim-evidence pairs. Consequently, the number of rows in our dataset is higher than in the original. This granular structure enhances the precision and effectiveness of training and evaluating fact verification models.
 
-## ADAPTERS LLAMA3 FINETUNED ON FEVER AND FEVER-IT
+## Adapters Llama3 finetuned on FEVER and FEVER-IT
 In the following section, you can find the models already finetuned with various modes.
 | LANGUAGE | DATASET | PROMPT |Document | Download |
 |:----:| :----:| :--------------: | :--: | :---------: |
@@ -65,7 +65,7 @@ In the following section, you can find the models already finetuned with various
 |ITA|FEVER-IT| 1-shot| Yes | [🤗](https://huggingface.co/sag-uniroma2/llama3_adapter_ITA_pr2_add1__split0_ep1_lr0.0001_fever-it) &nbsp;&nbsp; |
 
 
-## FINE-TUNING LLAMA3 ON FEVER AND FEVER-IT
+## Fine-Tuning Llama3 on FEVER and FEVER-IT
 
 ### Prerequisites
 - Anaconda or Miniconda installed on your system
@@ -124,7 +124,7 @@ python -u train.py --lang ITA --prompt_number 2 --learn_rate 0.0001 --epochs 1 -
 
 
  
-## TEST LLAMA3 ON FEVER AND FEVER-IT
+## Test Llama3 on FEVER and FEVER-IT
 ### Installation
 1. Clone the Repository
    ```bash
