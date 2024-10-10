@@ -89,3 +89,6 @@ python -u train.py --lang ITA --prompt_number 2 --learn_rate 0.0001 --epochs 1 -
    conda env create -f fevertest.yml
    conda activate fevertest
    ```
+**CALCULATE BASELINE**
+
+**TEST FINETUNED MODEL**
