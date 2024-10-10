@@ -3,7 +3,7 @@
 ## DATASET
 
 
-## ADAPTERS LLAMA3 FINETUNED ON FEVER AND FEVER-TI
+## ADAPTERS LLAMA3 FINETUNED ON FEVER AND FEVER-IT
 In the following section, you can find the models already finetuned with various modes.
 | LANGUAGE | PROMPT |Document | Download |
 |:----:| :--------------: | :--: | :---------: |
@@ -17,7 +17,7 @@ In the following section, you can find the models already finetuned with various
 |ITA| 1-shot| Yes | [🤗](https://huggingface.co/sag-uniroma2/llama3_adapter_ITA_pr2_add1__split0_ep1_lr0.0001_fever-it) &nbsp;&nbsp; |
 
 
-## FINE-TUNING LLAMA3 ON FEVER AND FEVER-TI
+## FINE-TUNING LLAMA3 ON FEVER AND FEVER-IT
 
 ### Prerequisites
 - Anaconda or Miniconda installed on your system
@@ -76,7 +76,7 @@ python -u train.py --lang ITA --prompt_number 2 --learn_rate 0.0001 --epochs 1 -
 
 
  
-## TEST LLAMA3 ON FEVER AND FEVER-TI
+## TEST LLAMA3 ON FEVER AND FEVER-IT
 ### Installation
 1. Clone the Repository
    ```bash
