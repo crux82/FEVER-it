@@ -212,7 +212,7 @@ python -u test.py --lang ITA --prompt_number 2 --adddoc 1 --splitevidence 0 --ad
 
 ### How to cite FEVER-it
 
-This dataset was introduced in the work *"Leveraging Large Language Models for Fact Verification in Italian"* available at the following [link](XXX.pdf).
+This dataset was introduced in the work *"Leveraging Large Language Models for Fact Verification in Italian"* available at the following [XXXXXXXXXXXXXXXX](XXX.pdf).
 If you find FEVER-it useful for your research, please cite the following paper:
 
 ~~~~
