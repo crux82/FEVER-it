@@ -24,6 +24,7 @@
    conda activate fevertrain
    ```
 ### FINE TUNING
+It is important to verify the correct row in the following table based on the type of fine-tuning you want to perform. Ensure you select the corresponding CODE and command for the correct setup.
 
 | CODE | PROMPT	| DOC	|
 | --------- | :---------: | :-----: |
@@ -31,8 +32,21 @@
 |	EN2 | 0-shot |YES |
 |	EN3 | 1-shot | NO  |
 |	EN4 | 1-shot | YES |
+|	IT1	|   0-shot | NO |
+|	IT2 | 0-shot |YES |
+|	IT3 | 1-shot | NO  |
+|	IT4 | 1-shot | YES |
 
-
+   ```bash
+EN1 python -u train.py --lang ENG --prompt_number 1 --learn_rate 0.0001 --epochs 1 --base_model meta-llama/Meta-Llama-3-8B-Instruct --conf config.json --adddoc 0 --splitevidence 0
+EN2 python -u train.py --lang ENG --prompt_number 1 --learn_rate 0.0001 --epochs 1 --base_model meta-llama/Meta-Llama-3-8B-Instruct --conf config.json --adddoc 1 --splitevidence 0
+EN3 python -u train.py --lang ENG --prompt_number 2 --learn_rate 0.0001 --epochs 1 --base_model meta-llama/Meta-Llama-3-8B-Instruct --conf config.json --adddoc 0 --splitevidence 0
+EN4 python -u train.py --lang ENG --prompt_number 2 --learn_rate 0.0001 --epochs 1 --base_model meta-llama/Meta-Llama-3-8B-Instruct --conf config.json --adddoc 1 --splitevidence 0
+IT1 python -u train.py --lang ITA --prompt_number 1 --learn_rate 0.0001 --epochs 1 --base_model meta-llama/Meta-Llama-3-8B-Instruct --conf config.json --adddoc 0 --splitevidence 0
+IT2 python -u train.py --lang ITA --prompt_number 1 --learn_rate 0.0001 --epochs 1 --base_model meta-llama/Meta-Llama-3-8B-Instruct --conf config.json --adddoc 1 --splitevidence 0
+IT3 python -u train.py --lang ITA --prompt_number 2 --learn_rate 0.0001 --epochs 1 --base_model meta-llama/Meta-Llama-3-8B-Instruct --conf config.json --adddoc 0 --splitevidence 0
+IT4 python -u train.py --lang ITA --prompt_number 2 --learn_rate 0.0001 --epochs 1 --base_model meta-llama/Meta-Llama-3-8B-Instruct --conf config.json --adddoc 1 --splitevidence 0
+   ```
 ## TEST LLAMA3 ON FEVER-IT
 ### Installation
 1. Clone the Repository
