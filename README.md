@@ -84,7 +84,7 @@ In the following section, you can find the models already finetuned with various
    conda env create -f fevertrain.yml
    conda activate fevertrain
    ```
-### FINE TUNING
+### Fine tuning
 It is important to verify the correct row in the following instruction based on the type of fine-tuning you want to perform. Ensure you select the corresponding command for the correct setup.
 
 English 0-shot, No Document
@@ -137,7 +137,7 @@ python -u train.py --lang ITA --prompt_number 2 --learn_rate 0.0001 --epochs 1 -
    conda env create -f fevertest.yml
    conda activate fevertest
    ```
-**BASELINE**
+**Baseline**
 
 English 0-shot, No Document
    ```bash
@@ -173,7 +173,7 @@ Italian 1-shot, With Document
    ```bash
 python -u test_baseline.py --lang ITA --prompt_number 2 --adddoc 1 --splitevidence 0 --adapter "NO" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
 ```
-**TEST FINETUNED MODEL**
+**Test finetuned models**
 
 English 0-shot, No Document
    ```bash
