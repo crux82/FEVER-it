@@ -1,0 +1,10 @@
+{
+  "LORA_R": 8,
+  "LORA_ALPHA": 16,
+  "LORA_DROPOUT": 0.05,
+  "LORA_TARGET_MODULES": ["q_proj", "k_proj", "down_proj", "v_proj", "gate_proj", "o_proj", "up_proj"],
+  "BATCH_SIZE": 32,
+  "MICRO_BATCH_SIZE": 2,
+  "GRADIENT_ACCUMULATION_STEPS": 8,
+  "WARMUP_RATIO": 0.1
+}
