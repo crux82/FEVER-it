@@ -3,7 +3,7 @@
 ## DATASET
 
 
-## ADAPTERS LLAMA3 FINETUNED ON  
+## ADAPTERS LLAMA3 FINETUNED ON FEVER AND FEVER-TI
 In the following section, you can find the models already finetuned with various modes.
 | LANGUAGE | PROMPT |Document | Download |
 |:----:| :--------------: | :--: | :---------: |
@@ -17,7 +17,7 @@ In the following section, you can find the models already finetuned with various
 |ITA| 1-shot| Yes | [🤗](https://huggingface.co/sag-uniroma2) &nbsp;&nbsp; |
 
 
-## FINE-TUNING LLAMA3 ON FEVER-IT
+## FINE-TUNING LLAMA3 ON FEVER AND FEVER-TI
 
 ### Prerequisites
 - Anaconda or Miniconda installed on your system
@@ -76,7 +76,7 @@ python -u train.py --lang ITA --prompt_number 2 --learn_rate 0.0001 --epochs 1 -
 
 
  
-## TEST LLAMA3 ON FEVER-IT
+## TEST LLAMA3 ON FEVER AND FEVER-TI
 ### Installation
 1. Clone the Repository
    ```bash
@@ -89,7 +89,7 @@ python -u train.py --lang ITA --prompt_number 2 --learn_rate 0.0001 --epochs 1 -
    conda env create -f fevertest.yml
    conda activate fevertest
    ```
-**CALCULATE BASELINE**
+**BASELINE**
 
 English 0-shot, No Document
    ```bash
@@ -127,38 +127,37 @@ python -u test_baseline.py --lang ITA --prompt_number 2 --adddoc 1 --spliteviden
 ```
 **TEST FINETUNED MODEL**
 
-
 English 0-shot, No Document
    ```bash
-   python -u test.py --lang ENG --prompt_number 1 --adddoc 0 --splitevidence 0 --adapter "" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
+   python -u test.py --lang ENG --prompt_number 1 --adddoc 0 --splitevidence 0 --adapter "sag-uniroma2/llama3_adapter_ENG_pr1_add0__split0_ep1_lr0.0001_fever-it" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
   ```
 English 0-shot, With Document
    ```bash
-  python -u test.py --lang ENG --prompt_number 1 --adddoc 1 --splitevidence 0 --adapter "" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
+  python -u test.py --lang ENG --prompt_number 1 --adddoc 1 --splitevidence 0 --adapter "sag-uniroma2/llama3_adapter_ENG_pr1_add1__split0_ep1_lr0.0001_fever-it" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
 ```
 English 1-shot, No Document
    ```bash
-  python -u test.py --lang ENG --prompt_number 2 --adddoc 0 --splitevidence 0 --adapter "" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
+  python -u test.py --lang ENG --prompt_number 2 --adddoc 0 --splitevidence 0 --adapter "sag-uniroma2/llama3_adapter_ENG_pr2_add0__split0_ep1_lr0.0001_fever-it" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
 ```
 English 1-shot, With Document
    ```bash
-  python -u test.py --lang ENG --prompt_number 2 --adddoc 1 --splitevidence 0 --adapter "" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
+  python -u test.py --lang ENG --prompt_number 2 --adddoc 1 --splitevidence 0 --adapter "sag-uniroma2/llama3_adapter_ENG_pr2_add1__split0_ep1_lr0.0001_fever-it" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
 ```
 
 
 Italian 0-shot, No Document
    ```bash
-  python -u test.py --lang ITA --prompt_number 1 --adddoc 0 --splitevidence 0 --adapter "" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
+  python -u test.py --lang ITA --prompt_number 1 --adddoc 0 --splitevidence 0 --adapter "sag-uniroma2/llama3_adapter_ITA_pr1_add0__split0_ep1_lr0.0001_fever-it" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
   ```
 Italian 0-shot, With Document
    ```bash
-python -u test.py --lang ITA --prompt_number 1 --adddoc 1 --splitevidence 0 --adapter "" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
+python -u test.py --lang ITA --prompt_number 1 --adddoc 1 --splitevidence 0 --adapter "sag-uniroma2/llama3_adapter_ITA_pr1_add1__split0_ep1_lr0.0001_fever-it" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
   ```
 Italian 1-shot, No Document
    ```bash
-python -u test.py --lang ITA --prompt_number 2 --adddoc 0 --splitevidence 0 --adapter "" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
+python -u test.py --lang ITA --prompt_number 2 --adddoc 0 --splitevidence 0 --adapter "sag-uniroma2/llama3_adapter_ITA_pr2_add0__split0_ep1_lr0.0001_fever-it" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
   ```
 Italian 1-shot, With Document
    ```bash
-python -u test.py --lang ITA --prompt_number 2 --adddoc 1 --splitevidence 0 --adapter "" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
+python -u test.py --lang ITA --prompt_number 2 --adddoc 1 --splitevidence 0 --adapter "sag-uniroma2/llama3_adapter_ITA_pr2_add1__split0_ep1_lr0.0001_fever-it" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
 ```
