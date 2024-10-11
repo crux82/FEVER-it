@@ -220,8 +220,9 @@ If you find FEVER-it useful for your research, please cite the following paper:
 ~~~~
 
 ## References
-CITARE FEVER ORIGINALE
-CITARE LLAMA3
+Thorne, James and Vlachos, Andreas and Christodoulopoulos, Christos and Mittal, Arpit, {FEVER}: a Large-scale Dataset for Fact Extraction and {VERification}, NAACL-HLT 2018
+
+[Meta Llama 3](https://ai.meta.com/blog/meta-llama-3/)
 
 ## Contacts
 
