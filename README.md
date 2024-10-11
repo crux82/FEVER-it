@@ -51,6 +51,11 @@ Our dataset is derived from an extended version of FEVER that includes evidence 
 
 In contrast to the reference dataset, where each claim could be associated with multiple pieces of evidence (corresponding to multiple lines from Wikipedia articles), we have separated these into individual claim-evidence pairs. Consequently, the number of rows in our dataset is higher than in the original. This granular structure enhances the precision and effectiveness of training and evaluating fact verification models.
 
+### Download Dataset
+
+To download the Fever-it dataset, please refer to [this folder](https://github.com/crux82/FEVER-it)
+
+
 ## Adapters Llama3 finetuned on FEVER and FEVER-IT
 In the following section, you can find the models already finetuned with various modes.
 | LANGUAGE | DATASET | PROMPT |Document | Download |
