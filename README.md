@@ -1,9 +1,56 @@
 # FEVER-it
+This repository contains the dataset and code for "Leveraging Large Language Models for Fact Verification in Italian" published at CLiC-it 2024 by Antonio Scaiella, Stefano Costanzo, Elisa Passone, Danilo Croce, and Giorgio Gambosi. The paper is available here XXXXXXX
 
-## DATASET
+## Dataset
+FEVER-IT is a large-scale dataset designed for training and evaluating fact verification systems in Italian. The dataset was derived from the English [FEVER dataset](https://aclanthology.org/N18-1074.pdf), which was published for the FEVER 2018 shared task competition. The original dataset consists of 185,445 claims manually verified against Wikipedia, annotated with labels indicating whether the evidence supports, refutes, or provides not enough information about the claim.
+
+We based our work on an [extended version](https://huggingface.co/datasets/copenlu/fever_gold_evidence) of the FEVER dataset that, which along with several adjustments, includes synthetic evidence for the "Not Enough Info" category, enhancing its utility for training fact-checking models.
+
+To ensure high-quality translations, our team of reviewers manually validated a subset of the data. They focused on correcting errors related to fluency, completeness, and correctness of the automatic translations compared to the original English text. This effort produced the **GOLD** dataset, a high-quality subset containing **2,063** manually validated claim-evidence pairs.
+
+The quality of the automatic translations was evaluated by comparing the GOLD set with the corresponding portion of the SILVER set using BLEU metrics. The results indicated very high translation quality:
+
+| Metric | BLEU-1 | BLEU-2 | BLEU-3 | BLEU-4 |
+|--------|--------|--------|--------|--------|
+| **Claim** | 0.9776 | 0.9695 | 0.9623 | 0.9544 |
+| **Evidence** | 0.9529 | 0.9411 | 0.9309 | 0.9207 |
+
+### Dataset Structure
+
+The final FEVER-IT dataset is organized into three subsets:
+* **Training Set**: 228,277 claim-evidence pairs (SILVER)
+* **Validation Set**: 15,935 claim-evidence pairs (SILVER)
+* **Test Set**: 2,063 manually validated claim-evidence pairs (GOLD)
+
+We include the training and validation sets with claim-evidence pairs automatically translated in the SILVER dataset. For the test set, we provide only the manually validated GOLD dataset, ensuring high-quality evaluation.
+
+Each claim is categorized into one of three classes, consistent with the original FEVER dataset:
+* **Supports**
+* **Refutes**
+* **Not Enough Info**
+
+The distribution in the GOLD test set is as follows:
+* **Total**: 2,063
+   * **Supports**: 654
+   * **Refutes**: 643
+   * **Not Enough Info**: 766
+
+Note that the actual original English texts are not included in this dataset, although alignment to the source data is maintained and cross-lingual research is possible.
+
+### Methodology for Using FEVER-IT
+
+The FEVER-IT dataset is intended to facilitate the development of fact verification systems in Italian. Researchers can train models on the SILVER dataset (training and validation sets) and evaluate them using the high-quality GOLD test set.
+
+In our experiments, we fine-tuned a model on the FEVER-IT dataset. We achieved excellent performance, with metrics of recall, precision, accuracy, and F1-score comparable to a model trained on English data. This demonstrates the dataset's effectiveness in supporting the development of robust fact verification systems in Italian.
+
+**Note**: The focus of FEVER-IT is on claim verification using provided evidence. The evidence retrieval component is not addressed in this dataset, as the primary goal is to provide a relevant and high-quality resource for fact-checking in Italian.
+
+### Download Dataset
+
+To download the Fever-it dataset, please refer to [this folder](https://github.com/crux82/FEVER-it)
 
 
-## ADAPTERS LLAMA3 FINETUNED ON FEVER AND FEVER-IT
+## Adapters Llama3 finetuned on FEVER and FEVER-IT
 In the following section, you can find the models already finetuned with various modes.
 | LANGUAGE | DATASET | PROMPT |Document | Download |
 |:----:| :----:| :--------------: | :--: | :---------: |
@@ -17,7 +64,7 @@ In the following section, you can find the models already finetuned with various
 |ITA|FEVER-IT| 1-shot| Yes | [🤗](https://huggingface.co/sag-uniroma2/llama3_adapter_ITA_pr2_add1__split0_ep1_lr0.0001_fever-it) &nbsp;&nbsp; |
 
 
-## FINE-TUNING LLAMA3 ON FEVER AND FEVER-IT
+## Fine-Tuning Llama3 on FEVER and FEVER-IT
 
 ### Prerequisites
 - Anaconda or Miniconda installed on your system
@@ -36,7 +83,7 @@ In the following section, you can find the models already finetuned with various
    conda env create -f fevertrain.yml
    conda activate fevertrain
    ```
-### FINE TUNING
+### Fine-tuning
 It is important to verify the correct row in the following instruction based on the type of fine-tuning you want to perform. Ensure you select the corresponding command for the correct setup.
 
 English 0-shot, No Document
@@ -76,7 +123,7 @@ python -u train.py --lang ITA --prompt_number 2 --learn_rate 0.0001 --epochs 1 -
 
 
  
-## TEST LLAMA3 ON FEVER AND FEVER-IT
+## Test Llama3 on FEVER and FEVER-IT
 ### Installation
 1. Clone the Repository
    ```bash
@@ -89,43 +136,43 @@ python -u train.py --lang ITA --prompt_number 2 --learn_rate 0.0001 --epochs 1 -
    conda env create -f fevertest.yml
    conda activate fevertest
    ```
-**BASELINE**
+**Baseline**
 
 English 0-shot, No Document
    ```bash
-   python -u test_baseline.py --lang ENG --prompt_number 1 --adddoc 0 --splitevidence 0 --adapter "" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
+   python -u test_baseline.py --lang ENG --prompt_number 1 --adddoc 0 --splitevidence 0 --adapter "NO" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
   ```
 English 0-shot, With Document
    ```bash
-  python -u test_baseline.py --lang ENG --prompt_number 1 --adddoc 1 --splitevidence 0 --adapter "" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
+  python -u test_baseline.py --lang ENG --prompt_number 1 --adddoc 1 --splitevidence 0 --adapter "NO" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
 ```
 English 1-shot, No Document
    ```bash
-  python -u test_baseline.py --lang ENG --prompt_number 2 --adddoc 0 --splitevidence 0 --adapter "" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
+  python -u test_baseline.py --lang ENG --prompt_number 2 --adddoc 0 --splitevidence 0 --adapter "NO" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
 ```
 English 1-shot, With Document
    ```bash
-  python -u test_baseline.py --lang ENG --prompt_number 2 --adddoc 1 --splitevidence 0 --adapter "" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
+  python -u test_baseline.py --lang ENG --prompt_number 2 --adddoc 1 --splitevidence 0 --adapter "NO" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
 ```
 
 
 Italian 0-shot, No Document
    ```bash
-  python -u test_baseline.py --lang ITA --prompt_number 1 --adddoc 0 --splitevidence 0 --adapter "" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
+  python -u test_baseline.py --lang ITA --prompt_number 1 --adddoc 0 --splitevidence 0 --adapter "NO" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
   ```
 Italian 0-shot, With Document
    ```bash
-python -u test_baseline.py --lang ITA --prompt_number 1 --adddoc 1 --splitevidence 0 --adapter "" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
+python -u test_baseline.py --lang ITA --prompt_number 1 --adddoc 1 --splitevidence 0 --adapter "NO" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
   ```
 Italian 1-shot, No Document
    ```bash
-python -u test_baseline.py --lang ITA --prompt_number 2 --adddoc 0 --splitevidence 0 --adapter "" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
+python -u test_baseline.py --lang ITA --prompt_number 2 --adddoc 0 --splitevidence 0 --adapter "NO" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
   ```
 Italian 1-shot, With Document
    ```bash
-python -u test_baseline.py --lang ITA --prompt_number 2 --adddoc 1 --splitevidence 0 --adapter "" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
+python -u test_baseline.py --lang ITA --prompt_number 2 --adddoc 1 --splitevidence 0 --adapter "NO" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
 ```
-**TEST FINETUNED MODEL**
+**Test finetuned models**
 
 English 0-shot, No Document
    ```bash
@@ -161,3 +208,21 @@ Italian 1-shot, With Document
    ```bash
 python -u test.py --lang ITA --prompt_number 2 --adddoc 1 --splitevidence 0 --adapter "sag-uniroma2/llama3_adapter_ITA_pr2_add1__split0_ep1_lr0.0001_fever-it" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
 ```
+
+## How to cite FEVER-it
+
+This dataset was introduced in the work *"Leveraging Large Language Models for Fact Verification in Italian"* available at the following [XXXXXXXXXXXXXXXX](XXX.pdf).
+If you find FEVER-it useful for your research, please cite the following paper:
+
+~~~~
+
+~~~~
+
+## References
+Thorne, James and Vlachos, Andreas and Christodoulopoulos, Christos and Mittal, Arpit, FEVER: a Large-scale Dataset for Fact Extraction and VERification, NAACL-HLT 2018 [Link](https://fever.ai/dataset/fever.html)
+
+Introducing Meta Llama 3: The most capable openly available LLM to date [Meta Llama 3](https://ai.meta.com/blog/meta-llama-3/)
+
+## Contacts
+
+For any questions or suggestions, you can send an e-mail to <croce@info.uniroma2.it>
