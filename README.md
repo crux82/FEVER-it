@@ -334,6 +334,8 @@ Thorne, James and Vlachos, Andreas and Christodoulopoulos, Christos and Mittal, 
 
 Introducing Meta Llama 3: The most capable openly available LLM to date [Meta Llama 3](https://ai.meta.com/blog/meta-llama-3/)
 
+Atanasova, Pepa  and Wright, Dustin  and Augenstein, Isabelle, Generating Label Cohesive and Well-Formed Adversarial Claims [dataset](https://huggingface.co/datasets/copenlu/fever_gold_evidence) [paper](https://aclanthology.org/2020.emnlp-main.256/)
+
 ## Contacts
 
 For any questions or suggestions, you can send an e-mail to <croce@info.uniroma2.it>
