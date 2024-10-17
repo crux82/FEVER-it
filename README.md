@@ -51,7 +51,7 @@ To download the Fever-it dataset, please refer to [this folder](https://github.c
 
 
 ## Adapters Llama3 finetuned on FEVER and FEVER-IT
-In the following section, you can find the models already finetuned with various modes. See detail in appendix of this page
+In the following section, you can find the models already finetuned with various modes.   [See details](#prompts-in-italian)
 | LANGUAGE | DATASET | PROMPT |Document | Download |
 |:----:| :----:| :--------------: | :--: | :---------: |
 |ENG|FEVER| 0-shot | No | [🤗](https://huggingface.co/sag-uniroma2/llama3_adapter_ENG_pr1_add0__split0_ep1_lr0.0001_fever-eng) &nbsp;&nbsp; |
