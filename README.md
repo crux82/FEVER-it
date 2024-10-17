@@ -35,7 +35,7 @@ The distribution in the GOLD test set is as follows:
    * **Refutes**: 643
    * **Not Enough Info**: 766
 
-<!-Note that the actual original English texts are not included in this dataset, although alignment to the source data is maintained and cross-lingual research is possible.->
+<!--- Note that the actual original English texts are not included in this dataset, although alignment to the source data is maintained and cross-lingual research is possible. -->
 
 ### Methodology for Using FEVER-IT
 
