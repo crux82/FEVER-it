@@ -244,10 +244,38 @@ Rispondi con uno dei seguenti giudizi basati sulle prove fornite:
 - SUPPORTS: se le prove confermano l'affermazione.
 - REFUTES: se le prove contraddicono direttamente l'affermazione.
 - NOT ENOUGH INFO: se le prove non sono sufficienti per determinare la validità dell'affermazione.
-
 ### Input
 - Affermazione: [CLAIM HERE]
 - Prova: [EVIDENCE HERE]
-
 ### Risposta: [ANSWER HERE]
 
+### 1-shot Setting
+The following prompt is used for 1-shot learning, where the task and classes are explained, and one example per class is provided. Notice that only the evidence is reported without the title of the original document.
+```plaintext
+### Istruzioni
+Valuta se l'affermazione è supportata dalle prove fornite. Le definizioni dei termini chiave utilizzati in questo compito sono:
+- Affermazione: Una dichiarazione o asserzione sotto esame.
+- Prova: Informazioni che supportano o contraddicono l'affermazione.
+
+Rispondi con uno dei seguenti giudizi basati sulle prove fornite:
+- SUPPORTS: se le prove confermano l'affermazione.
+- REFUTES: se le prove contraddicono direttamente l'affermazione.
+- NOT ENOUGH INFO: se le prove non sono sufficienti per determinare la validità dell'affermazione.
+
+### Esempi
+Questi esempi dimostrano come applicare i criteri di valutazione:
+- Affermazione: I popoli germanici sono chiamati anche gotici.
+- Prova: I popoli germanici (anche chiamati Teutoni, Suebi o Goti nella letteratura più antica) sono un gruppo etno-linguistico indoeuropeo di origine nord europea.
+- Risposta: SUPPORTS
+
+- Affermazione: Il tennis non è uno sport.
+- Prova: Il tennis è praticato da milioni di giocatori amatoriali ed è anche uno sport popolare a livello mondiale.
+- Risposta: REFUTES
+
+- Affermazione: Kick-Ass è un film horror.
+- Prova: Kick-Ass è un film britannico-americano del 2010 basato sul fumetto omonimo di Mark Millar e John Romita Jr.
+- Risposta: NOT ENOUGH INFO
+### Input
+- Affermazione: [CLAIM HERE]
+- Prova: [EVIDENCE HERE]
+### Risposta: [ANSWER HERE]
