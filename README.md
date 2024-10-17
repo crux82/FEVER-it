@@ -51,7 +51,7 @@ To download the Fever-it dataset, please refer to [this folder](https://github.c
 
 
 ## Adapters Llama3 finetuned on FEVER and FEVER-IT
-In the following section, you can find the models already finetuned with various modes.
+In the following section, you can find the models already finetuned with various modes. See detail in appendix of this page
 | LANGUAGE | DATASET | PROMPT |Document | Download |
 |:----:| :----:| :--------------: | :--: | :---------: |
 |ENG|FEVER| 0-shot | No | [🤗](https://huggingface.co/sag-uniroma2/llama3_adapter_ENG_pr1_add0__split0_ep1_lr0.0001_fever-eng) &nbsp;&nbsp; |
@@ -226,3 +226,28 @@ Introducing Meta Llama 3: The most capable openly available LLM to date [Meta Ll
 ## Contacts
 
 For any questions or suggestions, you can send an e-mail to <croce@info.uniroma2.it>
+
+
+
+## Prompts in Italian
+
+### 0-shot Setting
+The following prompt is used for 0-shot learning, where the task and classes are presented without additional information.
+
+```plaintext
+### Istruzioni
+Valuta se l'affermazione è supportata dalle prove fornite. Le definizioni dei termini chiave utilizzati in questo compito sono:
+- Affermazione: Una dichiarazione o asserzione sotto esame.
+- Prova: Informazioni che supportano o contraddicono l'affermazione.
+
+Rispondi con uno dei seguenti giudizi basati sulle prove fornite:
+- SUPPORTS: se le prove confermano l'affermazione.
+- REFUTES: se le prove contraddicono direttamente l'affermazione.
+- NOT ENOUGH INFO: se le prove non sono sufficienti per determinare la validità dell'affermazione.
+
+### Input
+- Affermazione: [CLAIM HERE]
+- Prova: [EVIDENCE HERE]
+
+### Risposta: [ANSWER HERE]
+
