@@ -209,25 +209,6 @@ Italian 1-shot, With Document
 python -u test.py --lang ITA --prompt_number 2 --adddoc 1 --splitevidence 0 --adapter "sag-uniroma2/llama3_adapter_ITA_pr2_add1__split0_ep1_lr0.0001_fever-it" --base_model "meta-llama/Meta-Llama-3-8B-Instruct"
 ```
 
-## How to cite FEVER-it
-
-This dataset was introduced in the work *"Leveraging Large Language Models for Fact Verification in Italian"* available at the following [XXXXXXXXXXXXXXXX](XXX.pdf).
-If you find FEVER-it useful for your research, please cite the following paper:
-
-~~~~
-
-~~~~
-
-## References
-Thorne, James and Vlachos, Andreas and Christodoulopoulos, Christos and Mittal, Arpit, FEVER: a Large-scale Dataset for Fact Extraction and VERification, NAACL-HLT 2018 [Link](https://fever.ai/dataset/fever.html)
-
-Introducing Meta Llama 3: The most capable openly available LLM to date [Meta Llama 3](https://ai.meta.com/blog/meta-llama-3/)
-
-## Contacts
-
-For any questions or suggestions, you can send an e-mail to <croce@info.uniroma2.it>
-
-
 
 ## Prompts in Italian
 
@@ -281,3 +262,78 @@ Questi esempi dimostrano come applicare i criteri di valutazione:
 - Prova: [EVIDENCE HERE]
 ### Risposta: [ANSWER HERE]
 ```
+
+### 0-shot Setting with Document Title
+The following prompt is used for 0-shot learning, where the task and classes are explained without additional information. Each input evidence is provided with the title of its original document.
+```plaintext
+### Istruzioni
+Valuta se l'affermazione è supportata dalle prove fornite. Le definizioni dei termini chiave utilizzati in questo compito sono:
+- Affermazione: Una dichiarazione o asserzione sotto esame.
+- Prova: Informazioni che supportano o contraddicono l'affermazione.
+- Documento: indica la fonte da cui è stata estratta la prova.
+
+Rispondi con uno dei seguenti giudizi basati sulle prove fornite:
+- SUPPORTS: se le prove confermano l'affermazione.
+- REFUTES: se le prove contraddicono direttamente l'affermazione.
+- NOT ENOUGH INFO: se le prove non sono sufficienti per determinare la validità dell'affermazione.
+### Input
+- Affermazione: [CLAIM HERE]
+- Prova: [EVIDENCE HERE]
+- Documento: [DOCUMENT HERE]
+### Risposta: [ANSWER HERE]
+```
+
+### 1-shot Setting with Document Title
+The following prompt is used for 1-shot learning, where the task and classes are explained, and one example per class is provided. Each input evidence is provided with the title of its original document.
+```plaintext
+### Istruzioni
+Valuta se l'affermazione è supportata dalle prove fornite. Le definizioni dei termini chiave utilizzati in questo compito sono:
+- Affermazione: Una dichiarazione o asserzione sotto esame.
+- Prova: Informazioni che supportano o contraddicono l'affermazione.
+- Documento: indica la fonte da cui è stata estratta la prova.
+
+Rispondi con uno dei seguenti giudizi basati sulle prove fornite:
+- SUPPORTS: se le prove confermano l'affermazione.
+- REFUTES: se le prove contraddicono direttamente l'affermazione.
+- NOT ENOUGH INFO: se le prove non sono sufficienti per determinare la validità dell'affermazione.
+
+### Esempi
+Questi esempi dimostrano come applicare i criteri di valutazione:
+- Affermazione: I popoli germanici sono chiamati anche gotici.
+- Prova: I popoli germanici (anche chiamati Teutoni, Suebi o Goti nella letteratura più antica) sono un gruppo etno-linguistico indoeuropeo di origine nord europea.
+- Documento: Popoli germanici
+- Risposta: SUPPORTS
+
+- Affermazione: Il tennis non è uno sport.
+- Prova: Il tennis è praticato da milioni di giocatori amatoriali ed è anche uno sport popolare a livello mondiale.
+- Documento: Tennis
+- Risposta: REFUTES
+
+- Affermazione: Kick-Ass è un film horror.
+- Prova: Kick-Ass è un film britannico-americano del 2010 basato sul fumetto omonimo di Mark Millar e John Romita Jr.
+- Documento: Kick-Ass (film)
+- Risposta: NOT ENOUGH INFO
+### Input
+- Affermazione: [CLAIM HERE]
+- Prova: [EVIDENCE HERE]
+- Documento: [DOCUMENT HERE]
+### Risposta: [ANSWER HERE]
+```
+
+## How to cite FEVER-it
+
+This dataset was introduced in the work *"Leveraging Large Language Models for Fact Verification in Italian"* available at the following [XXXXXXXXXXXXXXXX](XXX.pdf).
+If you find FEVER-it useful for your research, please cite the following paper:
+
+~~~~
+
+~~~~
+
+## References
+Thorne, James and Vlachos, Andreas and Christodoulopoulos, Christos and Mittal, Arpit, FEVER: a Large-scale Dataset for Fact Extraction and VERification, NAACL-HLT 2018 [Link](https://fever.ai/dataset/fever.html)
+
+Introducing Meta Llama 3: The most capable openly available LLM to date [Meta Llama 3](https://ai.meta.com/blog/meta-llama-3/)
+
+## Contacts
+
+For any questions or suggestions, you can send an e-mail to <croce@info.uniroma2.it>
