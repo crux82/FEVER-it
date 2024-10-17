@@ -248,6 +248,7 @@ Rispondi con uno dei seguenti giudizi basati sulle prove fornite:
 - Affermazione: [CLAIM HERE]
 - Prova: [EVIDENCE HERE]
 ### Risposta: [ANSWER HERE]
+```
 
 ### 1-shot Setting
 The following prompt is used for 1-shot learning, where the task and classes are explained, and one example per class is provided. Notice that only the evidence is reported without the title of the original document.
@@ -279,3 +280,4 @@ Questi esempi dimostrano come applicare i criteri di valutazione:
 - Affermazione: [CLAIM HERE]
 - Prova: [EVIDENCE HERE]
 ### Risposta: [ANSWER HERE]
+```
