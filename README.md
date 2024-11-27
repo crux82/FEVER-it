@@ -322,7 +322,7 @@ Questi esempi dimostrano come applicare i criteri di valutazione:
 
 ## How to cite FEVER-it
 
-This dataset was introduced in the work *"Leveraging Large Language Models for Fact Verification in Italian"* available at the following [XXXXXXXXXXXXXXXX](XXX.pdf).
+This dataset was introduced in the work *"Leveraging Large Language Models for Fact Verification in Italian"* <!--- available at the following [XXXXXXXXXXXXXXXX](XXX.pdf). -->
 If you find FEVER-it useful for your research, please cite the following paper:
 
 ~~~~
