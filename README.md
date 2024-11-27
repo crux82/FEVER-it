@@ -1,5 +1,5 @@
 # FEVER-it
-This repository contains the dataset and code for "Leveraging Large Language Models for Fact Verification in Italian" published at CLiC-it 2024 by Antonio Scaiella, Stefano Costanzo, Elisa Passone, Danilo Croce, and Giorgio Gambosi. The paper is available here XXXXXXX
+This repository contains the dataset and code for "Leveraging Large Language Models for Fact Verification in Italian" published at CLiC-it 2024 by Antonio Scaiella, Stefano Costanzo, Elisa Passone, Danilo Croce, and Giorgio Gambosi. [//]: #The paper is available here XXXXXXX
 
 ## Dataset
 FEVER-IT is a large-scale dataset designed for training and evaluating fact verification systems in Italian. The dataset was derived from the English [FEVER dataset](https://aclanthology.org/N18-1074.pdf), which was published for the FEVER 2018 shared task competition. The original dataset consists of 185,445 claims manually verified against Wikipedia, annotated with labels indicating whether the evidence supports, refutes, or provides not enough information about the claim.
@@ -51,7 +51,7 @@ To download the Fever-it dataset, please refer to [this folder](https://github.c
 
 
 ## Adapters Llama3 finetuned on FEVER and FEVER-IT
-In the following section, you can find the models already finetuned with various modes. More detail about prompts in [this section](#prompts-in-italian) or "Prompting Engineering" Appendix in the paper XXXXXXXXXXXXXXXXX
+In the following section, you can find the models already finetuned with various modes. More detail about prompts in [this section](#prompts-in-italian) or "Prompting Engineering" Appendix in the paper [//]: # XXXXXXXXXXXXXXXXX
 | LANGUAGE | DATASET | PROMPT |Document | Download |
 |:----:| :----:| :--------------: | :--: | :---------: |
 |ENG|FEVER| 0-shot | No | [🤗](https://huggingface.co/sag-uniroma2/llama3_adapter_ENG_pr1_add0__split0_ep1_lr0.0001_fever-eng) &nbsp;&nbsp; |
