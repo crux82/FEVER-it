@@ -1,5 +1,5 @@
 # FEVER-it
-This repository contains the dataset and code for "Leveraging Large Language Models for Fact Verification in Italian" published at CLiC-it 2024 by Antonio Scaiella, Stefano Costanzo, Elisa Passone, Danilo Croce, and Giorgio Gambosi. <!-The paper is available [HERE](https://clic2024.ilc.cnr.it/wp-content/uploads/2024/12/97_main_long.pdf)
+This repository contains the dataset and code for "Leveraging Large Language Models for Fact Verification in Italian" published at CLiC-it 2024 by Antonio Scaiella, Stefano Costanzo, Elisa Passone, Danilo Croce, and Giorgio Gambosi. The paper is available [HERE](https://clic2024.ilc.cnr.it/wp-content/uploads/2024/12/97_main_long.pdf)
 
 ## Dataset
 FEVER-IT is a large-scale dataset designed for training and evaluating fact verification systems in Italian. The dataset was derived from the English [FEVER dataset](https://aclanthology.org/N18-1074.pdf), which was published for the FEVER 2018 shared task competition. The original dataset consists of 185,445 claims manually verified against Wikipedia, annotated with labels indicating whether the evidence supports, refutes, or provides not enough information about the claim.
