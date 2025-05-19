@@ -326,7 +326,27 @@ This dataset was introduced in the work *"Leveraging Large Language Models for F
 If you find FEVER-it useful for your research, please cite the following paper:
 
 ~~~~
-
+@inproceedings{scaiella-etal-2024-leveraging,
+    title = "Leveraging Large Language Models for Fact Verification in {I}talian",
+    author = "Scaiella, Antonio  and
+      Costanzo, Stefano  and
+      Passone, Elisa  and
+      Croce, Danilo  and
+      Gambosi, Giorgio",
+    editor = "Dell'Orletta, Felice  and
+      Lenci, Alessandro  and
+      Montemagni, Simonetta  and
+      Sprugnoli, Rachele",
+    booktitle = "Proceedings of the 10th Italian Conference on Computational Linguistics (CLiC-it 2024)",
+    month = dec,
+    year = "2024",
+    address = "Pisa, Italy",
+    publisher = "CEUR Workshop Proceedings",
+    url = "https://aclanthology.org/2024.clicit-1.97/",
+    pages = "898--908",
+    ISBN = "979-12-210-7060-6",
+    abstract = "In recent years, Automatic Fact Checking has become a crucial tool in combating fake news, leveraging AI to verify the accuracy of information. Despite significant advancements, most datasets and models are predominantly available in English, posing challenges for other languages. This paper presents an Italian resource based on the dataset made available in the FEVER evaluation campaign, created to train and evaluate fact-checking models in Italian. The dataset comprises approximately 240k examples, with over 2k test examples manually validated. Additionally, we fine-tuned a state-of-the-art LLM, namely LLaMA3, on both the original English and translated Italian datasets, demonstrating that fine-tuning significantly improves model performance. Our results suggest that the fine-tuned models achieve comparable accuracy in both languages, highlighting the value of the proposed resource."
+}
 ~~~~
 
 ## References
