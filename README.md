@@ -47,7 +47,8 @@ In our experiments, we fine-tuned a model on the FEVER-IT dataset. We achieved e
 
 ### Download Dataset
 
-To download the Fever-it dataset, please refer to [this folder](https://github.com/crux82/FEVER-it)
+- **Hugging Face:** https://huggingface.co/datasets/sag-uniroma2/FEVER-IT
+#To download the Fever-it dataset, please refer to [this folder](https://github.com/crux82/FEVER-it)
 
 
 ## Adapters Llama3 finetuned on FEVER and FEVER-IT
