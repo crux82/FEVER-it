@@ -46,9 +46,8 @@ In our experiments, we fine-tuned a model on the FEVER-IT dataset. We achieved e
 **Note**: The focus of FEVER-IT is on claim verification using provided evidence. The evidence retrieval component is not addressed in this dataset, as the primary goal is to provide a relevant and high-quality resource for fact-checking in Italian.
 
 ### Download Dataset
-
+To download the Fever-it dataset, please refer to 
 - **Hugging Face:** https://huggingface.co/datasets/sag-uniroma2/FEVER-IT
-#To download the Fever-it dataset, please refer to [this folder](https://github.com/crux82/FEVER-it)
 
 
 ## Adapters Llama3 finetuned on FEVER and FEVER-IT
